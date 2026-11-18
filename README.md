@@ -17,7 +17,7 @@ This repository only hosts release binaries and notes. The source is private.
 brew install subveilhq/tap/subveil
 ```
 
-Upgrade later with `brew update && brew upgrade subveil`.
+Upgrade later with `brew update && brew upgrade subveil`. Homebrew tracks the published stable formula. Check `subveil version` after installing or upgrading.
 
 ### Manual download
 
@@ -44,7 +44,7 @@ On Windows, extract the `.zip` and add `subveil.exe` to your `PATH`. On macOS, r
 curl -fsSL https://subveil.dev/install.sh | sh -s -- --version <version>
 ```
 
-Add `--pg-client <major>` on Debian or Ubuntu to also install the matching PostgreSQL client tools, which `--create-schema` needs for PostgreSQL.
+Add `--pg-client <major>` on Debian or Ubuntu to also install the matching PostgreSQL client tools, which PostgreSQL schema creation needs. With v0.4.0, pulling to an empty target creates its schema automatically. Use the version listed on the release page. An explicit version pin requires that version’s published archive and checksums.
 
 ## Supported databases
 
